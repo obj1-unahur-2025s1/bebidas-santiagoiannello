@@ -1,0 +1,32 @@
+import tito.*
+
+describe "las pruebas de tito"{
+
+  method initialize(){
+    tito.consumir(11, terere)
+  }
+
+  test "tito consume 11 de terere y su velocidad es 7.7"{
+    assert.equals(tito.velocidad() , 7.7)
+  }
+
+  test "tito consume 2 de terere y su velocidad es 7"{
+    tito.consumir(2, terere)
+    assert.equals(tito.velocidad() , 7)
+  }
+
+  test "tito consume 9 de terere y su velocidad es 7"{
+    tito.consumir(9, terere)
+    assert.equals(tito.velocidad() , 7)
+  }
+
+  test "tito consume 2 de cianuro y su velocidad es 0"{
+    tito.consumir(2, cianuro)
+    assert.equals(tito.velocidad() , 0)
+  }
+
+  test "tito consume 5 de whisky y su velocidad es 4.13"{
+    tito.consumir(5, whisky)
+    assert.equals(0.9**5*490/70, tito.velocidad())
+  }
+}
